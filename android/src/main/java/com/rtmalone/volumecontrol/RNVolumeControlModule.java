@@ -7,7 +7,7 @@ import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
 import android.media.AudioManager;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
 import com.facebook.react.bridge.ActivityEventListener;
@@ -68,7 +68,8 @@ public class RNVolumeControlModule extends ReactContextBaseJavaModule
 
     try {
       am = (AudioManager) this.rContext.getSystemService(Context.AUDIO_SERVICE);
-      max_volume = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+      //max_volume = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+      max_volume = am.getStreamMaxVolume(AudioManager.STREAM_VOICE_CALL);
       volumeBR = new VolumeBroadcastReceiver();
       registerVolumeReceiver();
     } catch (Exception e) {
@@ -103,14 +104,16 @@ public class RNVolumeControlModule extends ReactContextBaseJavaModule
   @ReactMethod
   public void change(float volume) {
     try {
-      am.setStreamVolume(AudioManager.STREAM_MUSIC, (int) (volume * max_volume), 0);
+      //am.setStreamVolume(AudioManager.STREAM_MUSIC, (int) (volume * max_volume), 0);
+      am.setStreamVolume(AudioManager.STREAM_VOICE_CALL, (int) (volume * max_volume), 0);
     } catch (Exception e) {
       Log.e(TAG, "Error Setting Volume", e);
     }
   }
 
   private float getNormalizedVolume() {
-    return am.getStreamVolume(AudioManager.STREAM_MUSIC) * 1.0f / max_volume;
+    //return am.getStreamVolume(AudioManager.STREAM_MUSIC) * 1.0f / max_volume;
+    return am.getStreamVolume(AudioManager.STREAM_VOICE_CALL) * 1.0f / max_volume;
   }
 
   public class VolumeBroadcastReceiver extends BroadcastReceiver {

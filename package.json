@@ -1,33 +1,62 @@
 {
-  "name": "react-native-volume-control",
-  "version": "0.1.0",
+  "_from": "react-native-volume-control",
+  "_id": "react-native-volume-control@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-LbFD6AoFltkYxFQEn5SlZsdHGtY4x/A7kkh6CJuzSWjyJMvNDNLTXiQ8YnSVTGiio/qhhWLXXfOMOothxo/16Q==",
+  "_location": "/react-native-volume-control",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-volume-control",
+    "name": "react-native-volume-control",
+    "escapedName": "react-native-volume-control",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-volume-control/-/react-native-volume-control-1.0.1.tgz",
+  "_shasum": "b080750dbd89a0dd736e409238531e1819cde95c",
+  "_spec": "react-native-volume-control",
+  "_where": "D:\\Progetti\\AppMedicaleWeCare\\CuraMiApp\\curami-apps\\curami-assisted\\CuramiAssisted",
+  "author": {
+    "name": "Tyler Malone",
+    "email": "rtylermalone@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/rtmalone/react-native-volume-control/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  },
+  "deprecated": false,
   "description": "Control device volume for iOS and Android",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"No tests\""
+  "devDependencies": {
+    "react-native": ">=0.31.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rtmalone/react-native-volume-control.git"
-  },
+  "homepage": "https://github.com/rtmalone/react-native-volume-control#readme",
   "keywords": [
     "volume",
     "control",
     "sound"
   ],
-  "author": "Tyler Malone <rtylermalone@gmail.com>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rtmalone/react-native-volume-control/issues"
-  },
-  "homepage": "https://github.com/rtmalone/react-native-volume-control#readme",
+  "main": "index.js",
+  "name": "react-native-volume-control",
   "peerDependencies": {
     "react-native": ">=0.31.0"
   },
-  "devDependencies": {
-    "react-native": ">=0.31.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtmalone/react-native-volume-control.git"
   },
-  "dependencies": {
-    "prop-types": "^15.6.0"
-  }
+  "scripts": {
+    "test": "echo \"No tests\""
+  },
+  "version": "1.0.1"
 }
